@@ -3,6 +3,8 @@ import FlatCards from './components/FlatCards';
 import {View, Text, SafeAreaView, ScrollView, StyleSheet, Image} from 'react-native';
 import ElevatedCards from './components/ElevatedCards';
 import MagicCard from './components/MagicCard'
+import FancyCards from './components/FancyCards';
+import ContactList from './components/ContactList';
 const App = () => {
   return (
     <SafeAreaView>
@@ -10,25 +12,15 @@ const App = () => {
         <View>
           <FlatCards />
           <ElevatedCards/>
-          <Image 
-             source={require('./src/assets/nature.jpg')}
-            //  resizeMode={'cover'}
-             style={[styles.imageView ]}
-          />
-          <MagicCard />
+          <MagicCard /> 
+          <FancyCards/>
+          <ContactList/>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-       imageView:{
-           width:340,
-           height:200,
-           borderRadius:5,
-           margin:15
-       }
-})
+
 
 export default App;
